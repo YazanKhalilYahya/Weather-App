@@ -7,6 +7,7 @@ const url = "https://api.openweathermap.org/data/2.5/weather?";
 
 const city = document.querySelector(".city");
 const temp = document.querySelector(".temp");
+const description = document.querySelector(".description");
 const weather_img = document.querySelector(".weather-img");
 const search_btn = document.querySelector(".search-btn");
 const input = document.querySelector(".city-input");
@@ -25,6 +26,7 @@ search_btn.addEventListener("click", () => {
     } else {
       const data = await fetch_url.json();
       city.innerHTML = data.name;
+      description.innerHTML = `${data.weather[0].description}`;
       temp.innerHTML = Math.round(data.main.temp) + "°C";
       humidity.innerHTML = `${data.main.humidity}%`;
       wind_speed.innerHTML = `${data.wind.speed} km/h`;
