@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.city-input {
+  width: calc(100% - 50px);
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.search-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.invalid-city {
+  color: red;
+  display: none; /* Initially hidden */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.weather-details {
+  margin-top: 20px;
+  display: none;
+}
+
+.weather-img {
+  width: 100px;
+  height: 100px;
+}
+
+.temp {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.city {
+  font-size: 24px;
+  color: #555;
+}
+
+.more-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.humidity,
+.wind {
+  text-align: center;
+}
+
+.humidity-heading,
+.wind-speed-heading {
+  font-size: 16px;
+  color: #888;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.humidity-img,
+.wind-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.humidity-percentage,
+.wind-speed {
+  font-size: 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .weather-card {
+    padding: 15px;
+  }
+
+  .temp {
+    font-size: 36px;
+  }
+
+  .city {
+    font-size: 20px;
+  }
+
+  .humidity-heading,
+  .wind-speed-heading {
+    font-size: 14px;
+  }
+
+  .humidity-percentage,
+  .wind-speed {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    padding: 10px;
+  }
+
+  .temp {
+    font-size: 28px;
+  }
+
+  .city {
+    font-size: 18px;
+  }
+
+  .humidity-heading,
+  .wind-speed-heading {
+    font-size: 12px;
+  }
+
+  .humidity-percentage,
+  .wind-speed {
+    font-size: 14px;
+  }
+
+  .weather-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .humidity-img,
+  .wind-img {
+    width: 25px;
+    height: 25px;
+  }
+}
